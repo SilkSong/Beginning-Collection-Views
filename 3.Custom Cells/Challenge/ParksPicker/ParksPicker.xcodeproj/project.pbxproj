@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4D54D9B1F1E294D00BC6622 /* ParkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D54D9A1F1E294D00BC6622 /* ParkCell.swift */; };
+		E4D54D9E1F1E2B6600BC6622 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D54D9D1F1E2B6600BC6622 /* GradientView.swift */; };
+		F544AE451D9AD3DB00D56CC0 /* Photo Attribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = F544AE441D9AD3DB00D56CC0 /* Photo Attribution.txt */; };
+		F55E5AA21D95A523002036DD /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E5AA11D95A523002036DD /* Park.swift */; };
+		F55E5AA51D95A6E6002036DD /* ParksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E5AA41D95A6E6002036DD /* ParksDataSource.swift */; };
+		F55E5AA81D95AF94002036DD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E5AA71D95AF94002036DD /* CollectionViewCell.swift */; };
+		F55E5AAB1D95CFA3002036DD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E5AAA1D95CFA3002036DD /* DetailViewController.swift */; };
+		F5CD47311D949A70007A3267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD47301D949A70007A3267 /* AppDelegate.swift */; };
+		F5CD47361D949A70007A3267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CD47341D949A70007A3267 /* Main.storyboard */; };
+		F5CD47381D949A70007A3267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CD47371D949A70007A3267 /* Assets.xcassets */; };
+		F5CD473B1D949A70007A3267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CD47391D949A70007A3267 /* LaunchScreen.storyboard */; };
+		F5CD47431D94A1A4007A3267 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD47421D94A1A4007A3267 /* MasterViewController.swift */; };
+		F5CD47451D94A50A007A3267 /* NationalParks.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5CD47441D94A50A007A3267 /* NationalParks.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E4D54D9A1F1E294D00BC6622 /* ParkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkCell.swift; sourceTree = "<group>"; };
+		E4D54D9D1F1E2B6600BC6622 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F544AE441D9AD3DB00D56CC0 /* Photo Attribution.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Photo Attribution.txt"; sourceTree = "<group>"; };
+		F55E5AA11D95A523002036DD /* Park.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
+		F55E5AA41D95A6E6002036DD /* ParksDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParksDataSource.swift; sourceTree = "<group>"; };
+		F55E5AA71D95AF94002036DD /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F55E5AAA1D95CFA3002036DD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F5CD472D1D949A70007A3267 /* ParksPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParksPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CD47301D949A70007A3267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5CD47351D949A70007A3267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5CD47371D949A70007A3267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5CD473A1D949A70007A3267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5CD473C1D949A70007A3267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CD47421D94A1A4007A3267 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		F5CD47441D94A50A007A3267 /* NationalParks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NationalParks.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5CD472A1D949A70007A3267 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F544AE461D9AD3E000D56CC0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD47441D94A50A007A3267 /* NationalParks.plist */,
+				F544AE441D9AD3DB00D56CC0 /* Photo Attribution.txt */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		F55E5AA01D95A508002036DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD47421D94A1A4007A3267 /* MasterViewController.swift */,
+				F55E5AAA1D95CFA3002036DD /* DetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F55E5AA31D95A545002036DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F55E5AA11D95A523002036DD /* Park.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F55E5AA61D95A6F0002036DD /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F55E5AA41D95A6E6002036DD /* ParksDataSource.swift */,
+			);
+			name = "Data Sources";
+			sourceTree = "<group>";
+		};
+		F55E5AA91D95AF9E002036DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F55E5AA71D95AF94002036DD /* CollectionViewCell.swift */,
+				E4D54D9A1F1E294D00BC6622 /* ParkCell.swift */,
+				E4D54D9D1F1E2B6600BC6622 /* GradientView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F5CD47241D949A70007A3267 = {
+			isa = PBXGroup;
+			children = (
+				F5CD472F1D949A70007A3267 /* ParksPicker */,
+				F5CD472E1D949A70007A3267 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5CD472E1D949A70007A3267 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD472D1D949A70007A3267 /* ParksPicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5CD472F1D949A70007A3267 /* ParksPicker */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD47301D949A70007A3267 /* AppDelegate.swift */,
+				F55E5AA01D95A508002036DD /* Controllers */,
+				F55E5AA61D95A6F0002036DD /* Data Sources */,
+				F55E5AA31D95A545002036DD /* Models */,
+				F55E5AA91D95AF9E002036DD /* Views */,
+				F5CD47341D949A70007A3267 /* Main.storyboard */,
+				F5CD47371D949A70007A3267 /* Assets.xcassets */,
+				F5CD47391D949A70007A3267 /* LaunchScreen.storyboard */,
+				F5CD473C1D949A70007A3267 /* Info.plist */,
+				F544AE461D9AD3E000D56CC0 /* Data */,
+			);
+			path = ParksPicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5CD472C1D949A70007A3267 /* ParksPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CD473F1D949A70007A3267 /* Build configuration list for PBXNativeTarget "ParksPicker" */;
+			buildPhases = (
+				F5CD47291D949A70007A3267 /* Sources */,
+				F5CD472A1D949A70007A3267 /* Frameworks */,
+				F5CD472B1D949A70007A3267 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParksPicker;
+			productName = ParksPicker;
+			productReference = F5CD472D1D949A70007A3267 /* ParksPicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5CD47251D949A70007A3267 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Razeware, LLC";
+				TargetAttributes = {
+					F5CD472C1D949A70007A3267 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F5CD47281D949A70007A3267 /* Build configuration list for PBXProject "ParksPicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5CD47241D949A70007A3267;
+			productRefGroup = F5CD472E1D949A70007A3267 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5CD472C1D949A70007A3267 /* ParksPicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5CD472B1D949A70007A3267 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F544AE451D9AD3DB00D56CC0 /* Photo Attribution.txt in Resources */,
+				F5CD47451D94A50A007A3267 /* NationalParks.plist in Resources */,
+				F5CD473B1D949A70007A3267 /* LaunchScreen.storyboard in Resources */,
+				F5CD47381D949A70007A3267 /* Assets.xcassets in Resources */,
+				F5CD47361D949A70007A3267 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5CD47291D949A70007A3267 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55E5AA81D95AF94002036DD /* CollectionViewCell.swift in Sources */,
+				F55E5AA51D95A6E6002036DD /* ParksDataSource.swift in Sources */,
+				F5CD47311D949A70007A3267 /* AppDelegate.swift in Sources */,
+				F55E5AAB1D95CFA3002036DD /* DetailViewController.swift in Sources */,
+				F5CD47431D94A1A4007A3267 /* MasterViewController.swift in Sources */,
+				E4D54D9B1F1E294D00BC6622 /* ParkCell.swift in Sources */,
+				E4D54D9E1F1E2B6600BC6622 /* GradientView.swift in Sources */,
+				F55E5AA21D95A523002036DD /* Park.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5CD47341D949A70007A3267 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5CD47351D949A70007A3267 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5CD47391D949A70007A3267 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5CD473A1D949A70007A3267 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5CD473D1D949A70007A3267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5CD473E1D949A70007A3267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5CD47401D949A70007A3267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParksPicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.ParksPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F5CD47411D949A70007A3267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParksPicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.ParksPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5CD47281D949A70007A3267 /* Build configuration list for PBXProject "ParksPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CD473D1D949A70007A3267 /* Debug */,
+				F5CD473E1D949A70007A3267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5CD473F1D949A70007A3267 /* Build configuration list for PBXNativeTarget "ParksPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CD47401D949A70007A3267 /* Debug */,
+				F5CD47411D949A70007A3267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5CD47251D949A70007A3267 /* Project object */;
+}
