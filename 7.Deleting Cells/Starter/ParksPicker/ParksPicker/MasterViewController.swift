@@ -31,7 +31,9 @@ private let reuseIdentifier = "ParkCell"
 class MasterViewController: UICollectionViewController {
   
   fileprivate var parksDataSource = ParksDataSource()
-  
+    
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -46,6 +48,10 @@ class MasterViewController: UICollectionViewController {
     let refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(MasterViewController.refreshControlDidFire), for: .valueChanged)
     collectionView?.refreshControl = refreshControl
+    
+    navigationItem.leftBarButtonItem = editButtonItem
+    
+    navigationController!.isToolbarHidden = true
   }
   
   func refreshControlDidFire() {
@@ -59,7 +65,15 @@ class MasterViewController: UICollectionViewController {
       detailViewController.park = sender as? Park
     }
   }
-  
+    
+    
+    @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
+        
+        let indexPath = collectionView!.indexPathsForSelectedItems! as [IndexPath]
+        parksDataSource.deleteItemsAtIndexPaths(indexPath)
+        collectionView!.deleteItems(at: indexPath)
+    }
+
   @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
     let indexPath = parksDataSource.indexPathForNewRandomPark()
     let layout = collectionViewLayout as! ParksViewFlowLayout
@@ -74,6 +88,25 @@ class MasterViewController: UICollectionViewController {
     })
     
   }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        addButton.isEnabled = !editing
+        collectionView!.allowsMultipleSelection = editing
+        let indexPaths = collectionView!.indexPathsForVisibleItems as [IndexPath]
+        
+        for indexPath in indexPaths {
+            collectionView!.deselectItem(at: indexPath, animated: false)
+            let cell = collectionView!.cellForItem(at: indexPath) as? ParkCell
+            cell!.editing = editing
+        }
+        
+        if !editing {
+            navigationController?.setToolbarHidden(true, animated: animated)
+        }
+        
+    }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -107,6 +140,7 @@ extension MasterViewController {
 
     if let park = parksDataSource.parkForItemAtIndexPath(indexPath) {
       cell.park = park
+      cell.editing = isEditing
     }
     
     return cell
@@ -116,9 +150,21 @@ extension MasterViewController {
 // MARK: UICollectionViewDelegate
 extension MasterViewController {
   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    if let nationalPark = parksDataSource.parkForItemAtIndexPath(indexPath) {
-      performSegue(withIdentifier: "MasterToDetail", sender: nationalPark)
+    if !isEditing {
+        if let nationalPark = parksDataSource.parkForItemAtIndexPath(indexPath) {
+            performSegue(withIdentifier: "MasterToDetail", sender: nationalPark)
+        }
+    } else {
+        navigationController!.setToolbarHidden(false, animated: true)
     }
   }
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if isEditing {
+            if collectionView.indexPathsForSelectedItems!.count == 0 {
+                navigationController?.setToolbarHidden(true, animated: true)
+            }
+        }
+    }
   
 }

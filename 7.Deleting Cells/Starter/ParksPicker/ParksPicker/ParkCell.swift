@@ -30,7 +30,8 @@ class ParkCell: UICollectionViewCell {
   @IBOutlet weak var parkImageView: UIImageView!
   @IBOutlet private weak var gradientView: GradientView!
   @IBOutlet private weak var captionLabel: UILabel!
-	
+    @IBOutlet weak var checkedImageView: UIImageView!
+    
 	override func prepareForReuse() {
 		parkImageView.image = nil
 		captionLabel.text = ""
@@ -44,5 +45,20 @@ class ParkCell: UICollectionViewCell {
       }
     }
   }
+    
+    var editing = false {
+        didSet {
+            captionLabel.isHidden = editing
+            checkedImageView.isHidden = !editing
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if editing {
+                checkedImageView.image = UIImage(named: isSelected ? "Checked" : "Unchecked" )
+            }
+        }
+    }
     
 }
