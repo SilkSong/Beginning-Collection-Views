@@ -20,11 +20,13 @@
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ * THE SOFTWARE. 
  */ 
 
 
 import UIKit
+
+private let reuseIdentifier = "ParkCell"
 
 class MasterViewController: UICollectionViewController {
   
@@ -60,18 +62,23 @@ class MasterViewController: UICollectionViewController {
   
   @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
     let indexPath = parksDataSource.indexPathForNewRandomPark()
-    
     let layout = collectionViewLayout as! ParksViewFlowLayout
     layout.appearingIndexPath = indexPath
     
     UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
       
       self.collectionView!.insertItems(at: [indexPath as IndexPath])
-    }, completion: { (finished: Bool) -> Void in
+      
+      }, completion: { (finished: Bool) -> Void in
         layout.appearingIndexPath = nil
     })
+    
   }
   
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
 }
 
 // MARK: UICollectionViewDataSource
@@ -79,6 +86,7 @@ extension MasterViewController {
   override func numberOfSections(in collectionView: UICollectionView) -> Int {
     return parksDataSource.numberOfSections
   }
+  
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return parksDataSource.numberOfParksInSection(section)
@@ -95,8 +103,8 @@ extension MasterViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ParkCell", for: indexPath) as! ParkCell
-    
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ParkCell
+
     if let park = parksDataSource.parkForItemAtIndexPath(indexPath) {
       cell.park = park
     }

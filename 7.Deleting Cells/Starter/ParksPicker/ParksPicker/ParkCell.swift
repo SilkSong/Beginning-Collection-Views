@@ -44,5 +44,5 @@ class ParkCell: UICollectionViewCell {
       }
     }
   }
-  
+    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E47837941F1E756F00457461 /* ParksViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47837931F1E756E00457461 /* ParksViewFlowLayout.swift */; };
 		F54DEA721D95E5A5004B1935 /* ParkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54DEA711D95E5A5004B1935 /* ParkCell.swift */; };
 		F5574BA51DAE863B008D1B90 /* State Flags Attribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5574BA41DAE863B008D1B90 /* State Flags Attribution.txt */; };
 		F55E5AA21D95A523002036DD /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E5AA11D95A523002036DD /* Park.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E47837931F1E756E00457461 /* ParksViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksViewFlowLayout.swift; sourceTree = "<group>"; };
 		F54DEA711D95E5A5004B1935 /* ParkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkCell.swift; sourceTree = "<group>"; };
 		F5574BA41DAE863B008D1B90 /* State Flags Attribution.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "State Flags Attribution.txt"; sourceTree = "<group>"; };
 		F55E5AA11D95A523002036DD /* Park.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		F5A8B37F1DAEA34B005343DC /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				E47837931F1E756E00457461 /* ParksViewFlowLayout.swift */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47837941F1E756F00457461 /* ParksViewFlowLayout.swift in Sources */,
 				F55E5AA81D95AF94002036DD /* CollectionViewCell.swift in Sources */,
 				F55E5AA51D95A6E6002036DD /* ParksDataSource.swift in Sources */,
 				F5CD47311D949A70007A3267 /* AppDelegate.swift in Sources */,

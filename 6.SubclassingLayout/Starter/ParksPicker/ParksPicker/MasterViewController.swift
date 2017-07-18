@@ -60,12 +60,21 @@ class MasterViewController: UICollectionViewController {
   
   @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
     let indexPath = parksDataSource.indexPathForNewRandomPark()
-    //collectionView!.insertItems(at: [indexPath])
+    
+    let layout = collectionViewLayout as! ParksViewFlowLayout
+    layout.appearingIndexPath = indexPath
+    
+    
     
     UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
       
       self.collectionView!.insertItems(at: [indexPath as IndexPath])
-    })
+    }
+        ,
+                   completion: { (finished: Bool) in
+        layout.appearingIndexPath = nil
+    }
+    )
   }
   
   override func didReceiveMemoryWarning() {

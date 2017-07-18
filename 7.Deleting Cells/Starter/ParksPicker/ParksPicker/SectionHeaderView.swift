@@ -40,5 +40,6 @@ class SectionHeaderView: UICollectionReusableView {
       iconImageView.image = icon
     }
   }
+  
         
 }
